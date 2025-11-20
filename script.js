@@ -1,5 +1,6 @@
-//Definimos una función que actualice la hora cada segundo
+const reloj = document.getElementById("reloj");
 
+//Definimos una función que actualice la hora cada segundo
 function actualizarReloj() {
     const ahora = new Date();
 
@@ -7,7 +8,7 @@ function actualizarReloj() {
     const minutos = ahora.getMinutes().toString().padStart(2, "0");
     const segundos = ahora.getUTCSeconds().toString().padStart(2, "0");
 
-    document.getElementById("reloj").textContent = `${horas}:${minutos}:${segundos}`;
+    reloj.textContent = `${horas}:${minutos}:${segundos}`;
 }
 
 actualizarReloj();
